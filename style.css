@@ -1,0 +1,1269 @@
+/* ===========================
+   BEFIREKOT MEDIUM CLINIC
+   PREMIUM LUXURY STYLE
+=========================== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+:root{
+
+--primary:#0F172A;
+--secondary:#1E293B;
+--gold:#C6A96A;
+--gold-light:#E8D6B0;
+--white:#ffffff;
+--light:#F8FAFC;
+--gray:#94A3B8;
+--border:#E5E7EB;
+--shadow:0 15px 40px rgba(0,0,0,.12);
+
+}
+
+body{
+
+font-family:'Poppins',sans-serif;
+background:var(--light);
+color:#222;
+line-height:1.7;
+overflow-x:hidden;
+
+}
+
+h1,h2,h3,h4{
+
+font-family:'Cormorant Garamond',serif;
+font-weight:700;
+color:var(--primary);
+
+}
+
+a{
+
+text-decoration:none;
+
+}
+
+img{
+
+display:block;
+width:100%;
+height:auto;
+
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+header{
+
+position:fixed;
+top:0;
+left:0;
+width:100%;
+z-index:999;
+background:rgba(15,23,42,.95);
+backdrop-filter:blur(10px);
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+}
+
+.navbar{
+
+max-width:1200px;
+margin:auto;
+padding:18px 25px;
+
+display:flex;
+align-items:center;
+justify-content:space-between;
+
+}
+
+.logo{
+
+font-size:32px;
+font-family:'Cormorant Garamond',serif;
+font-weight:700;
+color:white;
+
+}
+
+.logo span{
+
+display:block;
+font-size:15px;
+letter-spacing:2px;
+color:var(--gold);
+
+}
+
+.nav-links{
+
+display:flex;
+list-style:none;
+gap:30px;
+
+}
+
+.nav-links a{
+
+color:white;
+font-size:15px;
+font-weight:500;
+transition:.3s;
+
+}
+
+.nav-links a:hover{
+
+color:var(--gold);
+
+}
+
+.nav-btn{
+
+padding:12px 24px;
+background:var(--gold);
+color:var(--primary);
+border-radius:40px;
+font-weight:600;
+transition:.3s;
+
+}
+
+.nav-btn:hover{
+
+transform:translateY(-2px);
+
+}
+
+.menu-icon{
+
+display:none;
+font-size:28px;
+color:white;
+cursor:pointer;
+
+}
+
+/* ===========================
+   HERO
+=========================== */
+
+.hero{
+
+min-height:100vh;
+
+background:
+
+linear-gradient(
+rgba(15,23,42,.75),
+rgba(15,23,42,.75)
+),
+
+url("https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1800&q=80");
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+
+padding:140px 20px 80px;
+
+}
+
+.hero-content{
+
+max-width:850px;
+
+}
+
+.tag{
+
+display:inline-block;
+padding:8px 20px;
+
+background:rgba(198,169,106,.15);
+
+border:1px solid rgba(198,169,106,.4);
+
+border-radius:50px;
+
+color:var(--gold-light);
+
+font-size:13px;
+
+letter-spacing:2px;
+
+margin-bottom:25px;
+
+}
+
+.hero h1{
+
+font-size:68px;
+line-height:1.1;
+color:white;
+margin-bottom:25px;
+
+}
+
+.hero p{
+
+font-size:18px;
+color:#E2E8F0;
+max-width:700px;
+margin:auto;
+
+}
+
+.hero-buttons{
+
+margin-top:40px;
+
+display:flex;
+justify-content:center;
+gap:18px;
+flex-wrap:wrap;
+
+}
+
+.main-btn{
+
+display:inline-block;
+
+padding:15px 34px;
+
+background:var(--gold);
+
+color:var(--primary);
+
+font-weight:600;
+
+border-radius:40px;
+
+transition:.35s;
+
+}
+
+.main-btn:hover{
+
+transform:translateY(-4px);
+box-shadow:var(--shadow);
+
+}
+
+.outline-btn{
+
+display:inline-block;
+
+padding:15px 34px;
+
+border:2px solid white;
+
+border-radius:40px;
+
+color:white;
+
+transition:.35s;
+
+}
+
+.outline-btn:hover{
+
+background:white;
+color:var(--primary);
+
+}
+
+/* ===========================
+   SECTION TITLE
+=========================== */
+
+section{
+
+padding:90px 20px;
+
+}
+
+.section-heading{
+
+text-align:center;
+margin-bottom:60px;
+
+}
+
+.section-heading span{
+
+color:var(--gold);
+letter-spacing:3px;
+font-size:13px;
+font-weight:600;
+
+}
+
+.section-heading h2{
+
+font-size:50px;
+margin-top:12px;
+
+}
+
+/* ===========================
+   ABOUT
+=========================== */
+
+.about-grid{
+
+max-width:1200px;
+margin:auto;
+
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+
+}
+
+.about-grid h3{
+
+font-size:42px;
+margin-bottom:20px;
+
+}
+
+.about-grid p{
+
+color:#555;
+margin-bottom:20px;
+font-size:16px;
+
+}
+
+.about-image{
+
+border-radius:24px;
+overflow:hidden;
+box-shadow:var(--shadow);
+
+}
+
+.about-image img{
+
+width:100%;
+height:100%;
+object-fit:cover;
+transition:.5s;
+
+}
+
+.about-image:hover img{
+
+transform:scale(1.05);
+
+}
+
+/* ===========================
+   SERVICES
+=========================== */
+
+.services{
+
+background:#F8FAFC;
+
+}
+
+.service-grid{
+
+max-width:1200px;
+margin:auto;
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+
+}
+
+.service-card{
+
+background:white;
+
+border-radius:22px;
+
+overflow:hidden;
+
+box-shadow:var(--shadow);
+
+transition:.35s;
+
+}
+
+.service-card:hover{
+
+transform:translateY(-10px);
+
+}
+
+.service-card img{
+
+height:230px;
+object-fit:cover;
+
+}
+
+.service-card h3{
+
+font-size:28px;
+
+padding:22px 25px 10px;
+
+}
+
+.service-card p{
+
+padding:0 25px 28px;
+
+color:#555;
+
+}
+
+/* ===========================
+   DOCTORS
+=========================== */
+
+.doctors{
+
+background:white;
+
+}
+
+.doctor-grid{
+
+max-width:1200px;
+margin:auto;
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+
+}
+
+.doctor-card{
+
+background:white;
+
+border-radius:22px;
+
+overflow:hidden;
+
+box-shadow:var(--shadow);
+
+text-align:center;
+
+transition:.35s;
+
+}
+
+.doctor-card:hover{
+
+transform:translateY(-10px);
+
+}
+
+.doctor-card img{
+
+height:340px;
+object-fit:cover;
+
+}
+
+.doctor-card h3{
+
+margin-top:20px;
+font-size:30px;
+
+}
+
+.doctor-card p{
+
+padding:15px 25px 30px;
+
+color:#666;
+
+  /* ===========================
+   WHY CHOOSE US
+=========================== */
+
+.why-us{
+
+background:#F8FAFC;
+
+}
+
+.difference-grid{
+
+max-width:1200px;
+
+margin:auto;
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+gap:30px;
+
+}
+
+.difference-grid div{
+
+background:white;
+
+padding:35px;
+
+border-radius:22px;
+
+box-shadow:var(--shadow);
+
+transition:.35s;
+
+border-top:4px solid var(--gold);
+
+}
+
+.difference-grid div:hover{
+
+transform:translateY(-8px);
+
+}
+
+.difference-grid h3{
+
+font-size:28px;
+
+margin-bottom:15px;
+
+}
+
+.difference-grid p{
+
+color:#666;
+
+}
+
+/* ===========================
+   HIGHLIGHTS
+=========================== */
+
+.highlights{
+
+background:linear-gradient(135deg,var(--primary),var(--secondary));
+
+color:white;
+
+}
+
+.highlight-grid{
+
+max-width:1200px;
+
+margin:auto;
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+gap:30px;
+
+}
+
+.highlight-grid div{
+
+text-align:center;
+
+padding:35px;
+
+}
+
+.highlight-grid h2{
+
+color:var(--gold-light);
+
+font-size:38px;
+
+margin-bottom:15px;
+
+}
+
+.highlight-grid p{
+
+color:#E2E8F0;
+
+}
+
+/* ===========================
+   APPOINTMENT
+=========================== */
+
+.appointment{
+
+background:white;
+
+}
+
+.appointment-container{
+
+max-width:700px;
+
+margin:auto;
+
+}
+
+#appointmentForm{
+
+display:grid;
+
+gap:20px;
+
+}
+
+#appointmentForm input,
+#appointmentForm select,
+#appointmentForm textarea{
+
+padding:16px 18px;
+
+border:1px solid var(--border);
+
+border-radius:12px;
+
+font-size:15px;
+
+font-family:'Poppins',sans-serif;
+
+outline:none;
+
+transition:.3s;
+
+}
+
+#appointmentForm input:focus,
+#appointmentForm select:focus,
+#appointmentForm textarea:focus{
+
+border-color:var(--gold);
+
+box-shadow:0 0 0 4px rgba(198,169,106,.15);
+
+}
+
+#appointmentForm textarea{
+
+min-height:150px;
+
+resize:vertical;
+
+}
+
+#appointmentForm button{
+
+padding:18px;
+
+border:none;
+
+background:var(--gold);
+
+color:var(--primary);
+
+font-size:16px;
+
+font-weight:600;
+
+border-radius:40px;
+
+cursor:pointer;
+
+transition:.35s;
+
+}
+
+#appointmentForm button:hover{
+
+transform:translateY(-3px);
+
+box-shadow:var(--shadow);
+
+}
+
+  /* ===========================
+   WHY CHOOSE US
+=========================== */
+
+.why-us{
+
+background:#F8FAFC;
+
+}
+
+.difference-grid{
+
+max-width:1200px;
+
+margin:auto;
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+gap:30px;
+
+}
+
+.difference-grid div{
+
+background:white;
+
+padding:35px;
+
+border-radius:22px;
+
+box-shadow:var(--shadow);
+
+transition:.35s;
+
+border-top:4px solid var(--gold);
+
+}
+
+.difference-grid div:hover{
+
+transform:translateY(-8px);
+
+}
+
+.difference-grid h3{
+
+font-size:28px;
+
+margin-bottom:15px;
+
+}
+
+.difference-grid p{
+
+color:#666;
+
+}
+
+/* ===========================
+   HIGHLIGHTS
+=========================== */
+
+.highlights{
+
+background:linear-gradient(135deg,var(--primary),var(--secondary));
+
+color:white;
+
+}
+
+.highlight-grid{
+
+max-width:1200px;
+
+margin:auto;
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+gap:30px;
+
+}
+
+.highlight-grid div{
+
+text-align:center;
+
+padding:35px;
+
+}
+
+.highlight-grid h2{
+
+color:var(--gold-light);
+
+font-size:38px;
+
+margin-bottom:15px;
+
+}
+
+.highlight-grid p{
+
+color:#E2E8F0;
+
+}
+
+/* ===========================
+   APPOINTMENT
+=========================== */
+
+.appointment{
+
+background:white;
+
+}
+
+.appointment-container{
+
+max-width:700px;
+
+margin:auto;
+
+}
+
+#appointmentForm{
+
+display:grid;
+
+gap:20px;
+
+}
+
+#appointmentForm input,
+#appointmentForm select,
+#appointmentForm textarea{
+
+padding:16px 18px;
+
+border:1px solid var(--border);
+
+border-radius:12px;
+
+font-size:15px;
+
+font-family:'Poppins',sans-serif;
+
+outline:none;
+
+transition:.3s;
+
+}
+
+#appointmentForm input:focus,
+#appointmentForm select:focus,
+#appointmentForm textarea:focus{
+
+border-color:var(--gold);
+
+box-shadow:0 0 0 4px rgba(198,169,106,.15);
+
+}
+
+#appointmentForm textarea{
+
+min-height:150px;
+
+resize:vertical;
+
+}
+
+#appointmentForm button{
+
+padding:18px;
+
+border:none;
+
+background:var(--gold);
+
+color:var(--primary);
+
+font-size:16px;
+
+font-weight:600;
+
+border-radius:40px;
+
+cursor:pointer;
+
+transition:.35s;
+
+}
+
+#appointmentForm button:hover{
+
+transform:translateY(-3px);
+
+box-shadow:var(--shadow);
+
+}
+
+}
+
+/* ===========================
+   TESTIMONIALS
+=========================== */
+
+.testimonials{
+
+background:#F8FAFC;
+
+}
+
+.testimonial-grid{
+
+max-width:1200px;
+margin:auto;
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:30px;
+
+}
+
+.testimonial-card{
+
+background:white;
+padding:35px;
+border-radius:22px;
+box-shadow:var(--shadow);
+border-left:5px solid var(--gold);
+
+}
+
+.testimonial-card p{
+
+color:#555;
+margin-bottom:20px;
+
+}
+
+.testimonial-card h4{
+
+color:var(--primary);
+
+}
+
+/* ===========================
+   FAQ
+=========================== */
+
+.faq{
+
+background:white;
+
+}
+
+.faq-container{
+
+max-width:900px;
+margin:auto;
+
+}
+
+.faq-item{
+
+padding:25px 0;
+border-bottom:1px solid #e5e7eb;
+
+}
+
+.faq-item h3{
+
+font-size:28px;
+margin-bottom:12px;
+
+}
+
+.faq-item p{
+
+color:#666;
+
+}
+
+/* ===========================
+   CONTACT
+=========================== */
+
+.contact{
+
+background:#F8FAFC;
+
+}
+
+.contact-grid{
+
+max-width:1200px;
+margin:auto;
+
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+
+}
+
+.contact-grid iframe{
+
+width:100%;
+height:420px;
+border:0;
+border-radius:20px;
+box-shadow:var(--shadow);
+
+}
+
+.contact h3{
+
+font-size:34px;
+margin-bottom:20px;
+
+}
+
+.contact p{
+
+margin-bottom:14px;
+color:#555;
+
+}
+
+/* ===========================
+   CTA
+=========================== */
+
+.cta{
+
+background:linear-gradient(135deg,var(--primary),var(--secondary));
+
+text-align:center;
+
+color:white;
+
+}
+
+.cta h2{
+
+font-size:52px;
+color:white;
+margin-bottom:20px;
+
+}
+
+.cta p{
+
+max-width:700px;
+margin:0 auto 35px;
+color:#E2E8F0;
+
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+
+background:#0B1120;
+color:white;
+padding:70px 20px 30px;
+
+}
+
+.footer-grid{
+
+max-width:1200px;
+margin:auto;
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:40px;
+
+}
+
+.footer-grid h2,
+.footer-grid h3{
+
+color:white;
+margin-bottom:20px;
+
+}
+
+.footer-grid p,
+.footer-grid li{
+
+color:#CBD5E1;
+margin-bottom:10px;
+list-style:none;
+
+}
+
+.footer-grid ul{
+
+padding:0;
+
+}
+
+.footer-grid a{
+
+color:#CBD5E1;
+transition:.3s;
+
+}
+
+.footer-grid a:hover{
+
+color:var(--gold);
+
+}
+
+.footer-grid input{
+
+width:100%;
+padding:14px;
+border:none;
+border-radius:10px;
+margin:15px 0;
+
+}
+
+.footer-grid button{
+
+padding:14px 22px;
+border:none;
+border-radius:40px;
+background:var(--gold);
+color:var(--primary);
+font-weight:600;
+cursor:pointer;
+
+}
+
+.copyright{
+
+text-align:center;
+margin-top:50px;
+padding-top:25px;
+border-top:1px solid rgba(255,255,255,.1);
+
+}
+
+.copyright p{
+
+color:#94A3B8;
+
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media(max-width:992px){
+
+.hero h1{
+
+font-size:48px;
+
+}
+
+.section-heading h2{
+
+font-size:38px;
+
+}
+
+.about-grid,
+.contact-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.nav-links{
+
+display:none;
+
+}
+
+.menu-icon{
+
+display:block;
+
+}
+
+.navbar{
+
+padding:18px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.hero{
+
+padding:140px 20px 80px;
+
+}
+
+.hero h1{
+
+font-size:38px;
+
+}
+
+.hero p{
+
+font-size:16px;
+
+}
+
+.hero-buttons{
+
+flex-direction:column;
+
+}
+
+.main-btn,
+.outline-btn{
+
+width:100%;
+text-align:center;
+
+}
+
+.section-heading h2{
+
+font-size:32px;
+
+}
+
+.about-grid h3{
+
+font-size:32px;
+
+}
+
+.service-card h3,
+.doctor-card h3{
+
+font-size:24px;
+
+}
+
+.cta h2{
+
+font-size:38px;
+
+}
+
+}

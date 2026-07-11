@@ -1,157 +1,118 @@
-// ==========================
-// MOBILE MENU
-// ==========================
+// ===============================
+// BEFIREKOT MEDIUM CLINIC
+// script.js
+// ===============================
 
-const menuIcon = document.querySelector(".menu-icon");
+// Mobile Menu
+const menuBtn = document.querySelector(".menu-btn");
 const navLinks = document.querySelector(".nav-links");
 
-menuIcon.addEventListener("click", () => {
+menuBtn.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+});
 
-    navLinks.classList.toggle("show");
+// Close menu after clicking a link
+document.querySelectorAll(".nav-links a").forEach(link => {
+    link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+    });
+});
+
+// Sticky Header
+const header = document.getElementById("header");
+
+window.addEventListener("scroll", () => {
+
+    if (window.scrollY > 60) {
+        header.classList.add("scrolled");
+    } else {
+        header.classList.remove("scrolled");
+    }
 
 });
 
+// Smooth Scroll
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
-// ==========================
-// SMOOTH CLOSE MENU
-// ==========================
+    anchor.addEventListener("click", function (e) {
 
-document.querySelectorAll(".nav-links a").forEach(link => {
+        e.preventDefault();
 
-    link.addEventListener("click", () => {
+        const target = document.querySelector(this.getAttribute("href"));
 
-        navLinks.classList.remove("show");
+        if (target) {
+
+            target.scrollIntoView({
+
+                behavior: "smooth"
+
+            });
+
+        }
 
     });
 
 });
 
+// Appointment Form
+const appointmentForm = document.querySelector(".appointment-form");
 
-// ==========================
-// HEADER SHADOW
-// ==========================
+if (appointmentForm) {
 
-const header = document.querySelector("header");
+    appointmentForm.addEventListener("submit", function (e) {
 
-window.addEventListener("scroll", () => {
+        e.preventDefault();
 
-    if(window.scrollY > 50){
+        alert("✅ Thank you! Your appointment request has been received.");
 
-        header.style.boxShadow = "0 8px 25px rgba(0,0,0,.15)";
+        appointmentForm.reset();
 
-    }else{
-
-        header.style.boxShadow = "none";
-
-    }
-
-});
-
-
-// ==========================
-// APPOINTMENT FORM
-// ==========================
-
-const appointmentForm = document.getElementById("appointmentForm");
-
-if(appointmentForm){
-
-appointmentForm.addEventListener("submit",function(e){
-
-e.preventDefault();
-
-alert("Thank you! Your appointment request has been received. Our team will contact you shortly.");
-
-appointmentForm.reset();
-
-});
+    });
 
 }
 
+// Newsletter Form
+const newsletterForm = document.querySelector(".newsletter-form");
 
-// ==========================
-// NEWSLETTER
-// ==========================
+if (newsletterForm) {
 
-const newsletterButton = document.querySelector("footer button");
+    newsletterForm.addEventListener("submit", function (e) {
 
-if(newsletterButton){
+        e.preventDefault();
 
-newsletterButton.addEventListener("click",()=>{
+        alert("🎉 Thank you for subscribing!");
 
-alert("Thank you for subscribing!");
+        newsletterForm.reset();
 
-});
-
-}
-
-
-// ==========================
-// SCROLL ANIMATION
-// ==========================
-
-const observer = new IntersectionObserver((entries)=>{
-
-entries.forEach(entry=>{
-
-if(entry.isIntersecting){
-
-entry.target.style.opacity="1";
-entry.target.style.transform="translateY(0)";
+    });
 
 }
 
-});
+// Fade In Animation
+const observer = new IntersectionObserver((entries) => {
 
-},{
-threshold:0.2
-});
+    entries.forEach(entry => {
 
+        if (entry.isIntersecting) {
 
-document.querySelectorAll("section,.service-card,.doctor-card,.testimonial-card").forEach(el=>{
+            entry.target.classList.add("show");
 
-el.style.opacity="0";
+        }
 
-el.style.transform="translateY(40px)";
+    });
 
-el.style.transition="all .7s ease";
+}, {
 
-observer.observe(el);
-
-});
-
-
-// ==========================
-// BUTTON RIPPLE EFFECT
-// ==========================
-
-document.querySelectorAll(".main-btn,.nav-btn").forEach(button=>{
-
-button.addEventListener("mouseenter",()=>{
-
-button.style.transform="translateY(-3px) scale(1.03)";
+    threshold: 0.15
 
 });
 
-button.addEventListener("mouseleave",()=>{
+document.querySelectorAll(
+".service-card, .team-card, .testimonial-card, .why-card, .about-content, .about-image"
+).forEach(el => {
 
-button.style.transform="translateY(0) scale(1)";
+    el.classList.add("hidden");
+
+    observer.observe(el);
 
 });
-
-});
-
-
-// ==========================
-// CURRENT YEAR
-// ==========================
-
-const year = new Date().getFullYear();
-
-const copyright = document.querySelector(".copyright p");
-
-if(copyright){
-
-copyright.innerHTML = `© ${year} Befirekot Medium Clinic. All Rights Reserved.`;
-
-}

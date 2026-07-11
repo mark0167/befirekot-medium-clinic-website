@@ -7,16 +7,16 @@
 
 :root{
 
---primary:#0F5C4D;
---primary-light:#3D8B78;
---secondary:#C9A66B;
---dark:#1E293B;
---light:#F8F8F5;
---white:#ffffff;
---gray:#6B7280;
---border:#E8ECE8;
+--primary:#0B3C5D;
+--primary-light:#1FA6A6;
+--secondary:#C6A15B;
+--dark:#243447;
+--light:#FAF9F6;
+--white:#FFFFFF;
+--gray:#64748B;
+--border:#E2E8F0;
 
---shadow:0 15px 40px rgba(0,0,0,.08);
+--shadow:0 15px 40px rgba(11,60,93,.10);
 
 --radius:18px;
 
@@ -1097,8 +1097,8 @@ cursor:pointer;
 ================================================== */
 
 footer{
-
-background:#17212B;
+background:#071A2B;
+}
 
 color:white;
 
